@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  <h2>{{ tarea.titulo }}</h2>
+  <p>{{ tarea.descripcion }}</p>
+  <p>{{ tarea.estado }}</p>
+  <p>{{ tarea.label }}</p>
+  <a href="{% url 'tarea_editar' tarea.id %}" class="btn btn-primary">Editar</a>
+  <a href="{% url 'tarea_borrar' tarea.id %}" class="btn btn-danger">Borrar</a>
+  {% if tarea.estado != 'C' %}
+    <a href="{% url 'tarea_completar' tarea.id %}" class="btn btn-success">Marcar como completada</a>
+ 
+  {% endif %} 
+{% endblock %}

@@ -1,0 +1,13 @@
+.centered-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+    color: #220de0;
+  }

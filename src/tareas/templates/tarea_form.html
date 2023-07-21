@@ -1,0 +1,10 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  <h1 class="mb-3">{% if form.instance.pk %}Editar{% else %}Nueva{% endif %} Tarea</h1>
+  <form method="POST" class="mb-3">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+{% endblock %}
